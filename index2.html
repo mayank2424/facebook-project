@@ -9,13 +9,10 @@
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
 <style>
 
-footer{
-  background-color: rgba(0,0,0,0.87);
-  height: 30px;
-  margin-top: 10px;
-}
 #menu {
   overflow: auto;
 }
@@ -28,9 +25,11 @@ footer{
 #header{
   background-color:#4267b2;
 }
-.navbar-brand  i {
-  color: black;
+#header a{
+  color: white;
+  margin-right: 10px;
 }
+
 .list-heading  {
   padding: 20px 15px 0 15px;
 }
@@ -49,20 +48,40 @@ font-size: 18px;
 .panel-body {
   padding: 5px;
 }
-.panel-footer{
-  margin-bottom: 10px;
-}
+
 .image-post{
   margin-bottom: 15px;
 }
 #menu::-webkit-scrollbar {
     display: none;
 }
+.navbar-header a {
+  margin-left: 170px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.comments {
+  margin: 0;
+}
+.media-body hr {
+  margin-top: 9px;
+  margin-bottom: 2px;
+  border: 1px solid grey;
+}
+#mynavigationbar img{
+  margin-right: 2px;
+}
+#main a {
+  font-size: 15px;
+}
+
+
 </style>
 
 </head>
 
 <body>
+  <header>
 
   <div class="container-fluid">
     <nav class="navbar navbar-default" id="header">
@@ -74,90 +93,147 @@ font-size: 18px;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-facebook"></i></a>
+        <a class="navbar-brand" href="#">F</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="mynavigationbar">
-        <ul class="nav navbar-nav">
 
-        </ul>
         <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+          <div class="input-group">
+            <input title="Search" type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></button>
+          </span>
           </div>
-          <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-        </form>
+          </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">messages</a></li>
-
+          <li title="Profile"><a href="#"><img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-1/p24x24/18519664_799904750157509_4944905860928906060_n.jpg?oh=a4712b6aa939bfa2bca6abd13b84a2b0&oe=59CFA681" height="23.5" width="23.5">  Mayank Gupta</a></li>
+          <li title="Home"><a href="#">Home</a></li>
+          <li title="user"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+          <li title="Message"><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+          <li title="Notification"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+          <ul class="nav navbar-nav navbar-right">
+          <li title="Toggle" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a  class="navbar-dropdown">href="#">Action</a></li>
+              <li><a  class="navbar-dropdown">href="#">Another action</a></li>
+              <li><a  class="navbar-dropdowmn">href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
           </li>
         </ul>
+      </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+</header>
   <!--header ends-->
-  <div class="container-fluid" id="wrapper">
+  <div class="container" id="wrapper">
 <div class="row">
- <div class="col-md-3 navbar-side">
+ <div class=" hidden-xs col-sm-4 col-md-3 navbar-side">
     <div id="main">
       <ul class="nav nav-pills nav-stacked">
-  <li role="presentation"><a href="#">profile</a></li>
-  <li role="presentation"><a href="#">News Feed</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <li title=" Profile" role="presentation"><a href="#"><img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-1/p24x24/18519664_799904750157509_4944905860928906060_n.jpg?oh=a4712b6aa939bfa2bca6abd13b84a2b0&oe=59CFA681" height="23.5" width="23.5">  Mayank Gupta</a></li>
+  <li title="News" role="presentation"><a href="#"><span class="fa fa-newspaper-o"></span> News Feed</a></li>
+  <li title="Messages" role="presentation"><a href="#"><span class="fa fa-comments"></span> Messages</a></li>
 </ul>
  <ul class="nav nav-pills nav-stacked">
-  <p class="list-heading">Shortcuts</p>
-  <li role="presentation"><a href="#">home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <p title="Shortcuts" class="list-heading">Shortcuts</p>
+  <li title="Home" role="presentation"><a href="#"><span class="fa fa-home"></span> home<span class="badge pull-right">5</span></a></li>
+  <li title="Profile" role="presentation"><a href="#"><span class="fa fa-user"></span> Profile<span class="badge pull-right">15</span></a></li>
+  <li title="Messages" role="presentation"><a href="#"><span class="fa fa-comments"></span> Messages<span class="badge pull-right">3</span></a></li>
 </ul>
 <ul class="nav nav-pills nav-stacked">
-  <p class="list-heading"><Explore</i></p>
-  <li role="presentation"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <p title="Explore" class="list-heading">Explore</i></p>
+  <li title="Home" role="presentation"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+  <li title="Profile" role="presentation"><a href="#"><span class="fa fa-user"></span> Profile</a></li>
+  <li title="Messages" role="presentation"><a href="#"><span class="fa fa-comment"></span>  Messages</a></li>
 </ul>
 
-    </div>
   </div>
-    <div class="col-md-6">
+  </div>
+    <div class=" col-xs-12 col-sm-8 col-md-6">
       <div id="menu">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><a href="#">Vishal sharma</a></h3>
+          </div>
+          <div class="panel-body">
+            <div class="image-post">
+              <img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/19399882_10154375669536292_2976291633117438835_n.jpg?oh=fdcadf846103c58b9cea9675591c8831&oe=59E31CD7" class="img-responsive" alt="Responsive image">
+            </div>
+
+            <div><span class="glyphicon glyphicon-thumbs-up"><a href="#">like</a></span>
+              <span class="glyphicon glyphicon-comment">comment</span>
+          </div>
+        </div>
+          <div class="panel-footer">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" src="http://via.placeholder.com/32x32">
+                </a>
+              </div>
+              <div class="media-body">
+                <p class="comments"><span><a href="#"> Mayank gupta</a></span> This is amazing</p>
+                <div>
+                  <small>
+                  <span><a href="#">Like</a></span>
+                  <span><a href="#"> Comment</a></span>
+                </small>
+              <hr>
+                </div>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" src="http://via.placeholder.com/32x32">
+                </a>
+              </div>
+              <div class="media-body">
+                <p class="comments"><span><a href="#"> Rahul sharma</a></span> thankyou</p>
+                <div>
+                  <small>
+                  <span><a href="#">Like</a></span>
+                  <span><a href="#"> Comment</a></span>
+                </small>
+                </div>
+              </div>
+            </div>
+            <input placeholder="write a comment....."style="width:100%; margin-top:  15px; height: 28px;"></div>
+        </div>
+          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><a href="#">mayank gupta</a></h3>
+          </div>
+          <div class="panel-body">
+             <video width=100% height="240" controls>
+             <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+              <source src="https://youtu.be/IzbCLooj-M8/movie.ogg" type="video/ogg">
+              </video>
+              <div> <span><span class="glyphicon glyphicon-thumbs-up">like</span></span>
+              <span><span class="glyphicon glyphicon-comment">comment</span>
+             </div>
+        </div>
+          <div class="panel-footer">Add comments here</div>
+        </div>
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><a href="#">mayank gupta</a></h3>
           </div>
           <div class="panel-body">
-            <div class="image-post">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjUcAbYPExWjOP6UM63vW4dX0Bb2gmti1sPpRxbSYliVY6GeTW" class="img-responsive" alt="Responsive image">
-            </div>
               <div><h5 class="text-post">Searching for a new laptop online is basically forcing your current computer to dig its own grave.</h3></div>
             <div> <span><span class="glyphicon glyphicon-thumbs-up">like</span></span>
               <span><span class="glyphicon glyphicon-comment">comment</span>
           </div>
         </div>
           <div class="panel-footer">Add comments here</div>
-
-          <div class="panel-heading">
-            <h3 class="panel-title"><a href="#">mayank gupta</a></h3>
-          </div>
-          <div class="panel-body">
-            <div><h5 class="text-post">Searching for a new laptop online is basically forcing your current computer to dig its own grave.</h3></div>
-            <div> <span><span class="glyphicon glyphicon-thumbs-up">like</span></span>
-              <span><span class="glyphicon glyphicon-comment">comment</span>
-          </div>
         </div>
-          <div class="panel-footer">Add comments here</div>
-          <div class="panel-heading">
-            <h3 class="panel-title"><a href="#">mayank gupta</a></h3>
-          </div>
-          <div class="panel-body">
-              <div><h5 class="text-post">Searching for a new laptop online is basically forcing your current computer to dig its own grave.</h3></div>
-            <div> <span><span class="glyphicon glyphicon-thumbs-up">like</span></span>
-              <span><span class="glyphicon glyphicon-comment">comment</span>
-          </div>
-        </div>
-          <div class="panel-footer">Add comments here</div>
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><a href="#">mayank gupta</a></h3>
           </div>
@@ -171,11 +247,60 @@ font-size: 18px;
         </div>
       </div>
     </div>
-    <div class="col-md-3">
-<div id="sidebar"></div>
-</div>
+    <div class=" hidden-xs hidden-sm-4 col-md-3">
+<div id="sidebar">
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" class="pull-right">
+      <li title="Top trending" role="presentation" class="active"><a href="#Top" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-flash"></span></a></li>
+      <li  title="politics"role="presentation"><a href="#Politics" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li title=" Sports" role="presentation"><a href="#Sports" aria-controls="messages" role="tab" data-toggle="tab"><soan class="fa fa-futbol-o"></span></a></li>
+      </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="Top">About top trending
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">show some content about top trending</p>
+          </a>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Politics">about politics
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">Show some about politics</p>
+          </a>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Sports">about sports
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">List group item heading</h4>
+            <p class="list-group-item-text">Show some Content about sports</p>
+          </a>
+        </div>
+      </div>
+      </div>
+
   </div>
 </div>
-<footer></footer>
+</div>
+  </div>
+  <ul class="nav nav-pills pull-right">
+     <li role="presentation"><a href="#">Privacy</a></li>
+     <li role="presentation"><a href="#">Advertising</a></li>
+     <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Contact Us</a></li>
+       <li role="presentation"><a href="#">Cookies</a></li>
+        <li role="presentation"><a href="#">Ad Choices</a></li>
+</ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/js/bootstrap.js"></script>
 </body>
 </html>
